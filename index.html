@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Password Generator</title>
+		<link rel="stylesheet" href="index.css" />
+		<script defer src="index.js"></script>
+	</head>
+	<body>
+		<h1 class="title">Password Generator</h1>
+		<div class="container">
+			<div class="output">
+				<div class="pwd">P4$5W0rD!</div>
+				<div class="">
+					<svg
+						viewBox="0 0 448 512"
+						width="1rem"
+						title="copy"
+						fill="transparent"
+						stroke="#a4ffaf"
+						stroke-width="30"
+					>
+						<span class="material-symbols-outlined">content_copy</span>
+					</svg>
+				</div>
+			</div>
+			<form class="options">
+				<div class="length_option">
+					<div class="length_label">
+						<label for="length">Character length</label>
+						<div class="length_value">0</div>
+					</div>
+					<input type="range" id="length" name="length" />
+				</div>
+				<div class="characters_options">
+					<div class="checkbox">
+						<input type="checkbox" id="uppercase" /><label for="uppercase"
+							>Uppercase letters</label
+						>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="lowercase" /><label for="lowercase"
+							>Lowercase letters</label
+						>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="numbers" /><label for="numbers"
+							>Numbers</label
+						>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="symbols" /><label for="symbols"
+							>Symbols</label
+						>
+					</div>
+				</div>
+				<div class="strength">
+					<p>STRENGTH</p>
+				</div>
+				<button id="generate">
+					<span>GENERATE</span
+					><svg viewBox="0 0 448 512" width="12" title="arrow-right">
+						<path
+							d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"
+						/>
+					</svg>
+				</button>
+			</form>
+		</div>
+	</body>
+</html>
