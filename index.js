@@ -9,6 +9,7 @@ const lowercase = document.getElementById("lowercase");
 const numbers = document.getElementById("numbers");
 const symbols = document.getElementById("symbols");
 const generate = document.getElementById("generate");
+const copyIcon = document.querySelector(".material-symbols-outlined");
 
 const SYMBOLS = "_-¿!@#$%^&*()?¡";
 const NUMBERS = "0123456789";
@@ -30,6 +31,7 @@ function generatePassword(e) {
 		})
 		.join("")
 		.slice(0, Number(length.value));
+	copyIcon.style.color = "#a4ffaf";
 	passwordOutput.style.color = "white";
 	passwordOutput.innerText = password;
 	checkStrength();
