@@ -80,19 +80,12 @@ document.querySelectorAll("input[type=checkbox]").forEach((i) =>
 	})
 );
 
-const strengthRatingBars = document.querySelectorAll(".bar");
-
 const styleRangeSlider = () => {
 	const min = length.min;
 	const max = length.max;
 	const val = length.value;
-
 	length.style.backgroundSize = ((val - min) * 100) / (max - min) + "% 100%";
 };
-
-length.addEventListener("input", () => {
-	styleRangeSlider();
-});
 
 const resetBarStyles = () => {
 	strengthRatingBars.forEach((bar) => {
@@ -110,6 +103,7 @@ const styleBars = ([...barElements], color) => {
 };
 
 length.addEventListener("input", (e) => {
+	styleRangeSlider();
 	lengthOutput.innerText = e.target.value;
 	checkStrength();
 });
