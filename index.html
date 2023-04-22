@@ -6,6 +6,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Password Generator</title>
 		<link rel="stylesheet" href="index.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+		/>
 		<script defer src="index.js"></script>
 	</head>
 	<body>
@@ -32,7 +36,14 @@
 						<label for="length">Character length</label>
 						<div class="length_value">0</div>
 					</div>
-					<input type="range" id="length" name="length" />
+					<input
+						type="range"
+						id="length"
+						name="length"
+						value="8"
+						min="8"
+						max="32"
+					/>
 				</div>
 				<div class="characters_options">
 					<div class="checkbox">
