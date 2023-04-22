@@ -31,7 +31,7 @@ function generatePassword(e) {
 		})
 		.join("")
 		.slice(0, Number(length.value));
-	copyIcon.style.color = "#a4ffaf";
+	copyIcon.style.color = "#a3ffae";
 	passwordOutput.style.color = "white";
 	passwordOutput.innerText = password;
 	checkStrength();
@@ -79,6 +79,35 @@ document.querySelectorAll("input[type=checkbox]").forEach((i) =>
 		checkStrength();
 	})
 );
+
+const strengthRatingBars = document.querySelectorAll(".bar");
+
+const styleRangeSlider = () => {
+	const min = length.min;
+	const max = length.max;
+	const val = length.value;
+
+	length.style.backgroundSize = ((val - min) * 100) / (max - min) + "% 100%";
+};
+
+length.addEventListener("input", () => {
+	styleRangeSlider();
+});
+
+const resetBarStyles = () => {
+	strengthRatingBars.forEach((bar) => {
+		bar.style.backgroundColor = "transparent";
+		bar.style.borderColor = "hsl(252, 11%, 91%)";
+	});
+};
+
+// Fill in specified meter bars with the provided color
+const styleBars = ([...barElements], color) => {
+	barElements.forEach((bar) => {
+		bar.style.backgroundColor = color;
+		bar.style.borderColor = color;
+	});
+};
 
 length.addEventListener("input", (e) => {
 	lengthOutput.innerText = e.target.value;
