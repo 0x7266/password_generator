@@ -44,18 +44,18 @@ function checkStrength() {
 	].filter((element) => Boolean(element)).length;
 	let score =
 		lowercase.checked + uppercase.checked + numbers.checked + symbols.checked;
-	console.log(score);
-	if (length.value >= 12) score += 7;
-	else if (length.value >= 8) score += 5;
-	else if (length.value >= 6) score += 2;
-	else length += 1;
+	let size = length.value;
+	if (size >= 12) score += 7;
+	else if (size >= 8) score += 5;
+	else if (size >= 5) score += 2;
+	else score += 1;
 	score = Math.floor(score / 2);
 	const descriptions = {
-		1: "Very weak",
-		2: "Weak",
-		3: "Moderate",
-		4: "Strong",
-		5: "Very Strong",
+		1: "VERY WEAK",
+		2: "WEAK",
+		3: "MODERATE",
+		4: "STRONG",
+		5: "VERY STRONG",
 	};
 	strengthOutput.innerText = descriptions[score];
 }
