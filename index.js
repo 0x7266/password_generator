@@ -29,4 +29,8 @@ function generatePassword(e) {
 	}
 }
 
+length.addEventListener("input", (e) => {
+	lengthOutput.innerText = e.target.value;
+});
+
 form.addEventListener("submit", generatePassword);
