@@ -82,5 +82,14 @@ length.addEventListener("input", (e) => {
 	lengthOutput.innerText = e.target.value;
 	checkStrength();
 });
+copy.addEventListener("click", async () => {
+	try {
+		if (passwordOutput.innerText !== "P4$5W0rD!" && passwordOutput.innerText) {
+			await navigator.clipboard.writeText(passwordOutput.innerText);
+		}
+	} catch (err) {
+		console.error("Failed to copy: ", err);
+	}
+});
 
 form.addEventListener("submit", generatePassword);
